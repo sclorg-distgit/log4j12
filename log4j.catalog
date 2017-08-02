@@ -1,0 +1,5 @@
+-- log4j DTD catalog --
+-- JPackage Project <http://www.jpackage.org/> --
+
+DOCTYPE log4j:configuration log4j.dtd
+PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" log4j.dtd

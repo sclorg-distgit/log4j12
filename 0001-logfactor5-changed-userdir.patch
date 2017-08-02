@@ -1,0 +1,56 @@
+From bf8f55bbc9baddcb67d0b89edd859f93ce3c949f Mon Sep 17 00:00:00 2001
+From: Stanislav Ochotnicky <sochotnicky@redhat.com>
+Date: Mon, 17 May 2010 12:57:36 +0200
+Subject: [PATCH 01/10] logfactor5 changed userdir
+
+---
+ .../lf5/viewer/configure/ConfigurationManager.java |    2 +-
+ .../log4j/lf5/viewer/configure/MRUFileManager.java |    6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/main/java/org/apache/log4j/lf5/viewer/configure/ConfigurationManager.java b/src/main/java/org/apache/log4j/lf5/viewer/configure/ConfigurationManager.java
+index a94ffab..81191f2 100644
+--- a/src/main/java/org/apache/log4j/lf5/viewer/configure/ConfigurationManager.java
++++ b/src/main/java/org/apache/log4j/lf5/viewer/configure/ConfigurationManager.java
+@@ -344,7 +344,7 @@ public class ConfigurationManager extends Object {
+     String home = System.getProperty("user.home");
+     String sep = System.getProperty("file.separator");
+ 
+-    return home + sep + "lf5" + sep + CONFIG_FILE_NAME;
++    return home + sep + ".logfactor5" + sep + CONFIG_FILE_NAME;
+   }
+ 
+   //--------------------------------------------------------------------------
+diff --git a/src/main/java/org/apache/log4j/lf5/viewer/configure/MRUFileManager.java b/src/main/java/org/apache/log4j/lf5/viewer/configure/MRUFileManager.java
+index 6ff275d..ca40d5a 100644
+--- a/src/main/java/org/apache/log4j/lf5/viewer/configure/MRUFileManager.java
++++ b/src/main/java/org/apache/log4j/lf5/viewer/configure/MRUFileManager.java
+@@ -175,14 +175,14 @@ public class MRUFileManager {
+ 
+   /**
+    * Creates the directory where the MRU file list will be written.
+-   * The "lf5" directory is created in the Documents and Settings
++   * The ".logfactor5" directory is created in the Documents and Settings
+    * directory on Windows 2000 machines and where ever the user.home
+    * variable points on all other platforms.
+    */
+   public static void createConfigurationDirectory() {
+     String home = System.getProperty("user.home");
+     String sep = System.getProperty("file.separator");
+-    File f = new File(home + sep + "lf5");
++    File f = new File(home + sep + ".logfactor5");
+     if (!f.exists()) {
+       try {
+         f.mkdir();
+@@ -268,7 +268,7 @@ public class MRUFileManager {
+     String home = System.getProperty("user.home");
+     String sep = System.getProperty("file.separator");
+ 
+-    return home + sep + "lf5" + sep + CONFIG_FILE_NAME;
++    return home + sep + ".logfactor5" + sep + CONFIG_FILE_NAME;
+   }
+ 
+   /**
+-- 
+1.6.6.1
+

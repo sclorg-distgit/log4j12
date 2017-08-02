@@ -1,0 +1,25 @@
+From 4753784d3e8ed5ec9973f67e9017bcb7ef41b4b1 Mon Sep 17 00:00:00 2001
+From: Stanislav Ochotnicky <sochotnicky@redhat.com>
+Date: Tue, 18 May 2010 15:07:00 +0200
+Subject: [PATCH 10/10] Fix javadoc link
+
+---
+ build.xml |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/build.xml b/build.xml
+index 54bad8f..c775a68 100644
+--- a/build.xml
++++ b/build.xml
+@@ -517,8 +517,7 @@
+ --&gt;'
+              bottom="Copyright 2000-2007 Apache Software Foundation.">
+ 
+-      <link href="http://java.sun.com/j2se/1.3/docs/api/"/>
+-      <link href="http://java.sun.com/j2ee/sdk_1.3/techdocs/api/"/>
++      <link href="${jdk.javadoc}"/>
+       <classpath refid="compile.classpath"/>
+     </javadoc>
+ 
+-- 
+1.6.6.1

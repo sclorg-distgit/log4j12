@@ -1,0 +1,34 @@
+From 91349164c1d44eec50ac1b09ef3e2ff41b4aa468 Mon Sep 17 00:00:00 2001
+From: Michal Srb <msrb@redhat.com>
+Date: Thu, 11 Jul 2013 11:13:45 +0200
+Subject: [PATCH] Fix tests
+
+---
+ tests/build.xml | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/tests/build.xml b/tests/build.xml
+index 74a7139..9149da2 100644
+--- a/tests/build.xml
++++ b/tests/build.xml
+@@ -31,13 +31,13 @@
+               the Maven repository can provide all the dependencies.  -->
+   <property name="m2_repo" location="${user.home}/.m2/repository"/>
+   <property name="oro.version" value="2.0.8"/>
+-  <property name="jakarta.oro.jar" location="${m2_repo}/oro/oro/${oro.version}/oro-${oro.version}.jar"/>
++  <property name="jakarta.oro.jar" location="lib/jakarta-oro.jar"/>
+   <property name="checkstyle.version" value="4.1"/>
+   <property name="checkstyle.jar" location="${m2_repo}/checkstyle/checkstyle/${checkstyle.version}/checkstyle-${checkstyle.version}.jar"/>
+-  <property name="javamail.jar" location="${m2_repo}/javax/mail/mail/1.4.3/mail-1.4.3.jar"/>
+-  <property name="activation.jar" location="${m2_repo}/javax/activation/activation/1.1/activation-1.1.jar"/>
++  <property name="javamail.jar" location="lib/mail.jar"/>
++  <property name="activation.jar" location="lib/mail.jar"/>
+   <property name="junit.version" value="3.8.1"/>
+-  <property name="junit.jar" location="${m2_repo}/junit/junit/${junit.version}/junit-${junit.version}.jar"/>
++  <property name="junit.jar" location="lib/junit.jar"/>
+ 
+ 
+   <!-- Read the system environment variables and stores them in properties, -->
+-- 
+1.8.1.4
+
