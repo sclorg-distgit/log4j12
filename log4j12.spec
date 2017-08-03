@@ -7,7 +7,7 @@
 
 Name:          %{?scl_prefix}log4j12
 Version:       1.2.17
-Release:       19.1%{?dist}
+Release:       19.2%{?dist}
 Summary:       Java logging package
 License:       ASL 2.0
 URL:           http://logging.apache.org/log4j/1.2/
@@ -182,6 +182,9 @@ fi
 %license LICENSE NOTICE
 
 %changelog
+* Thu Jun 22 2017 Michael Simacek <msimacek@redhat.com> - 1.2.17-19.2
+- Mass rebuild 2017-06-22
+
 * Wed Jun 21 2017 Java Maintainers <java-maint@redhat.com> - 1.2.17-19.1
 - Automated package import and SCL-ization
 
